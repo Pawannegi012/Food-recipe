@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infotrix Recipe</title>
+    <link rel="stylesheet" href="../home/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <div class="image2">
+          <a href="https://infotrixs.com/"><img src="../Infotrixs images/logo.png" id="logo" /></a>
+        </div>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><a href="../home/home.html">Home</a></li>
+          <li><a href="../All_recipes/All_Recipes.html">Breakfast</a></li>
+          <li>
+            <a href="../latest_recipe/Latest_Recipes.html">Latest Recipes</a>
+          </li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../contact/Contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-icons">
+          <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook" id="fb"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram" id="ig"></i></a>
+          <a href="https://twitter.com/"><i class="fa-brands fa-square-twitter" id="tw"></i>
+          <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin" id="li"></i></a>
+        </div>
+      </nav>
+    <!-- Search Bar -->
+    <div class="title">What you wanna eat ?</div>
+    <div class="search-wrapper">
+        <div class="fa fa-search"></div>
+        <input type="text" name=""  id="search" placeholder="search Food Item" onkeyup="search()">
+        <div class="fa fa-times" onclick="clearInput()" ></div>
+    </div>
+</div>
+
+<!-- Search Results -->
+    <div class="result">
+        <h1>Your Search Result: </h1>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="card-grid" >
+        <div class="food-list" id="food-list">
+                <p id="none" style="display: none;">Sorry, the food you were looking for was not available.</p>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+                      src="https://cdn.tasteatlas.com//images/dishes/55f00ba4fe8746a68b8ad62b24226e3b.jpg?w=905&h=510"
+                      alt=""
+                    />                    </div>
+                    <div class="card-body" >
+                    <h3> Chicken 65</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+            src="https://cdn.tasteatlas.com//Images/Dishes/6c8eab762bef45d4be6082f76f740c65.jpg?w=905&h=510"
+            alt=""
+          />
+                    </div>
+                    <div class="card-body" >
+                    <h3>Vindaloo </h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get2ndRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+                      src="https://cdn.tasteatlas.com//images/dishes/3bd6dfaf53e244dfb7f3ee390447a2f8.jpg?w=905&h=510"
+                      alt=""
+                    />
+                    </div>
+                    <div class="card-body" >
+                        <h3>Hyderabadi Biriyani</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get3rdRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+                      src="https://www.kitchensanctuary.com/wp-content/uploads/2019/08/Crispy-Chicken-Burger-square-FS-4518.jpg"
+                      alt=""
+                    />
+                    </div>
+                    <div class="card-body" >
+                        <h3>Chicken Burger</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get4thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+                      src="https://cdn.tasteatlas.com//images/dishes/67f10cadc4de457bbbefb3600c2298e7.jpg?w=905&h=510"
+                      alt=""
+                    />
+                   </div>
+                    <div class="card-body" >
+                    <h3> Kheer </h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get5thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyeZ1zFu54OcwsuwpeEYUQURPuzNws_JQVeA&usqp=CAU"
+                      alt=""
+                    />  
+                    </div>
+                    <div class="card-body" >
+                    <h3> Egg Roll</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get6thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+                      src="https://cdn.tasteatlas.com//Images/Dishes/bdab2e7920f0409188d0b3646826893a.jpg?w=905&h=510"
+                      alt=""
+                    />
+                    </div>
+                    <div class="card-body" >
+                    <h3> Tandoori Chicken</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get7thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+                      src="data:image/jpeg;base64,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"
+                      alt=""
+                    />
+                    </div>
+                    <div class="card-body" >
+                    <h3>Omelette</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get8thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+                      src="https://cdn.tasteatlas.com//Images/Dishes/23fba80da08c46ceba5a99a5b1f1f200.jpg?w=905&h=510"
+                      alt=""
+                    />                    </div>
+                    <div class="card-body" >
+                    <h3>Gulab Jamun</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get9thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+                      src="https://cdn.tasteatlas.com//Images/Dishes/84327074df8e4c5fabeaeca6fa3ab659.jpg?w=905&h=510"
+                      alt=""
+                    />                    </div>
+                    <div class="card-body" >
+                    <h3>Chaat</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get10thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                      <img
+                      src="https://tianmeds.github.io/ExpressEat/img/Potato-Breakfast-Skillet.webp"
+                      alt=""
+                    />                    </div>
+                    <div class="card-body" >
+                    <h3>Potato Egg Skillet</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get11thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+        </div> 
+
+        <!--Ending of Main Content-->
+
+        <!--Recipe Details-->
+        <div class = "meal-detail" id="meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Chicken 65</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Chicken 65 is a popular Indian appetizer known for its spicy and flavorful taste. Adjust the level of spices according to your preference. This dish is often served with onion slices and lemon wedges for an extra zing. Enjoy this delicious and crispy chicken recipe at your next gathering! </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p>
+                     <br/> 500 grams boneless chicken pieces
+                     <br/>1 cup yogurt
+                     <br/>2 tablespoons ginger-garlic paste
+                     <br/>1 tablespoon red chili powder
+                     <br/>1 tablespoon turmeric powder
+                     <br/>1 tablespoon garam masala
+                     <br/> 1 tablespoon coriander powder
+                     <br/>1 tablespoon cumin powder
+                     <br/>1 tablespoon lemon juice
+                     <br/>Salt to taste
+                     <br/>1 cup all-purpose flour
+                     <br/>2 tablespoons cornflour
+                     <br/>1 egg
+                     <br/>Oil for deep frying
+                     <br/> Curry leaves for garnish
+                     <br/>Green chilies for garnish
+                     <br/>Chopped coriander leaves for garnish
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br>Mix 1 cup yogurt, 2 tbsp ginger-garlic paste, 1 tbsp red chili powder, 1 tbsp turmeric powder, 1 tbsp garam masala, 1 tbsp coriander powder, 1 tbsp cumin powder, 1 tbsp lemon juice, and salt in a bowl.
+                        <br>Coat 500g boneless chicken pieces in the marinade and refrigerate for at least 2 hours.
+                        <br>Combine 1 cup all-purpose flour, 2 tbsp cornflour, a pinch of red chili powder, and salt.
+                        Beat an egg in a separate bowl.
+                        <br>Dip each marinated chicken piece in the beaten egg, then coat with the flour mixture.
+                        <br>Heat oil in a pan over medium-high heat.
+                        <br>Fry the coated chicken until golden brown and crisp.
+                        <br>Place the fried chicken on paper towels to absorb excess oil.
+                        <br>In a separate pan, heat oil and add curry leaves and green chilies.
+                        <br>Toss the fried chicken in the tempering for added flavor.
+                        <br>Garnish with chopped coriander leaves.
+                        <br>Serve hot as an appetizer or side dish with your favorite sauce or chutney.
+                        <br>Optional: Serve with onion slices and lemon wedges for an extra zing.
+                </div>
+                <div class = "meal-img">
+                  <img
+                  src="https://cdn.tasteatlas.com//images/dishes/55f00ba4fe8746a68b8ad62b24226e3b.jpg?w=905&h=510"
+                  alt=""
+                />                  </div>
+            </div>
+        </div>
+        <div class = "second-meal-detail" id="second-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Vindaloo</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">This Chicken Vindaloo recipe promises a mouthwatering experience, combining the heat of spices with the tanginess of yogurt for a truly satisfying meal. Enjoy the robust and aromatic flavors of this classic Indian dish! </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br>500 grams chicken pieces
+                     <br> 1 cup yogurt
+                     <br>2 tablespoons ginger-garlic paste
+                     <br>2 tablespoons vindaloo masala
+                     <br> 1 tablespoon red chili powder
+                     <br>1 tablespoon turmeric powder
+                     <br>Salt to taste
+                     <br>Cooking oil
+                     <br>2 onions, finely chopped
+                     <br>Curry leaves
+                     <br> Mustard seeds
+                     <br>Fresh coriander leaves for garnish
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br> In a bowl, combine 1 cup yogurt, 2 tablespoons ginger-garlic paste, 2 tablespoons vindaloo masala, 1 tablespoon red chili powder, 1 tablespoon turmeric powder, and salt.
+                      Marinate 500 grams of chicken pieces in this mixture and refrigerate for at least 2 hours for the flavors to meld.
+                      <br>Cooking Base:
+                      
+                      <br>Heat cooking oil in a pan and sauté finely chopped onions until golden brown.
+                      Add curry leaves and mustard seeds to the pan, allowing them to sizzle and release their flavors.
+                      <br> Adding Chicken:
+                      
+                      <br> Add the marinated chicken to the pan, stirring well to coat the pieces in the onion and spice mixture.
+                      Cook the chicken until it is tender and the spices have infused into a rich curry.
+                      <br>Final Touch:
+                      
+                      <br> Garnish the Chicken Vindaloo with fresh coriander leaves for a burst of freshness.
+                      <br>Serving:
+                      
+                      <br> Serve the Chicken Vindaloo hot, accompanied by steamed rice or warm naan bread.
+                        </p>
+            
+                </div>
+                <div class = "meal-img">
+                  <img
+            src="https://cdn.tasteatlas.com//Images/Dishes/6c8eab762bef45d4be6082f76f740c65.jpg?w=905&h=510"
+            alt=""
+          />                </div>
+
+            </div>
+        </div>  
+        <div class = "third-meal-detail" id="third-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Hyderabadi Biriyani</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">This aromatic and flavorful Hyderabadi Biryani, with its layers of marinated meat and fragrant rice, is a true delight for biryani enthusiasts. Enjoy the rich and authentic taste of this classic dish!
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br>500 grams chicken or lamb, cut into pieces
+                      <br> 2 cups basmati rice, soaked for 30 minutes
+                      <br>1 cup yogurt
+                      <br>2 large onions, thinly sliced
+                      <br>1/2 cup cooking oil or ghee
+                      <br>1/4 cup chopped mint leaves
+                      <br>1/4 cup chopped coriander leaves
+                      <br>1 tablespoon ginger-garlic paste
+                      <br> 1 tablespoon Biryani masala
+                      <br>1 teaspoon turmeric powder
+                      <br>1 teaspoon red chili powder
+                      <br> Whole spices: bay leaves, cinnamon sticks, cardamom pods, cloves
+                      <br>Salt to taste
+                      <br>Saffron strands soaked in warm milk (for garnish)
+                      <br>Fried onions for garnish
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br>Marination:
+
+                      <br>Marinate the chicken or lamb pieces in yogurt, ginger-garlic paste, Biryani masala, turmeric powder, red chili powder, and salt. Allow it to marinate for at least 2 hours.
+                      <br> Cooking Rice:
+                      
+                      <br>Boil the soaked basmati rice in a large pot of water with a pinch of salt until it's 70% cooked. Drain the water and set aside.
+                      <br>Sautéing Onions:
+                      
+                      <br>In a separate pan, heat oil or ghee and sauté thinly sliced onions until golden brown. Set aside a portion for garnish.
+                      <br>Layering:
+                      
+                      <br>In a heavy-bottomed pan or biryani pot, layer half of the partially cooked rice, followed by the marinated meat, fried onions, mint leaves, and coriander leaves. Repeat the layers.
+                      <br> Dum Cooking:
+                      
+                      <br>Sprinkle saffron-infused milk and a few whole spices over the top layer.
+                      <br>Cover the pot tightly with a lid or aluminum foil to create a dum (slow cooking) effect. Cook on low heat for 20-25 minutes until the meat is tender and the rice is fully cooked.
+                      <br>Garnishing:
+                      
+                      <br>Garnish the Hyderabadi Biryani with fried onions and additional mint and coriander leaves.
+                      <br>Serving:
+                      
+                      <br> Gently mix the layers before serving to distribute the flavors evenly.
+                      <br>Serve the Hyderabadi Biryani hot with raita or a side salad.
+                        </p>
+            
+                </div>
+                <div class = "meal-img">
+                  <img
+                  src="https://cdn.tasteatlas.com//images/dishes/3bd6dfaf53e244dfb7f3ee390447a2f8.jpg?w=905&h=510"
+                  alt=""
+                />                  </div>
+                
+            </div>
+        </div>  
+        <div class = "four-meal-detail" id="four-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Chicken Burger</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">This homemade chicken burger offers a juicy and flavorful alternative to the classic beef burger. Customize it with your preferred toppings and sauces for a delicious meal!
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br>500 grams ground chicken
+                      <br>1/4 cup breadcrumbs
+                      <br>1 egg
+                      <br>1/4 cup finely chopped onions
+                      <br>1 tablespoon minced garlic
+                      <br>1 tablespoon soy sauce
+                      <br>1 teaspoon dried oregano
+                      <br> Salt and pepper to taste
+                      <br>Cooking oil for frying
+                      <br> For the Burger Assembly:
+                      
+                      <br>Burger buns
+                      <br>Lettuce leaves
+                      <br>Sliced tomatoes
+                      <br>Sliced onions
+                      <br>Cheese slices
+                      <br> Mayonnaise
+                      <br>Ketchup
+                      <br>Mustard
+                      <br>Pickles (optional)
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br>Prepare the Chicken Patty:
+
+                      <br>In a bowl, combine ground chicken, breadcrumbs, egg, chopped onions, minced garlic, soy sauce, dried oregano, salt, and pepper.
+                      <br> Mix the ingredients thoroughly to form a consistent mixture.
+                      <br>Divide the mixture into equal portions and shape them into patties.
+                      <br> Cook the Chicken Patty:
+                      
+                      <br>Heat cooking oil in a pan over medium heat.
+                      <br>Cook the chicken patties for about 5-6 minutes on each side or until they are fully cooked and golden brown.
+                      <br>Ensure the internal temperature reaches 165°F (74°C).
+                      <br>Assemble the Burger:
+                      
+                      <br>Slice the burger buns in half and lightly toast them in the pan or toaster.
+                      <br>Spread mayonnaise on the bottom half of each bun.
+                      <br>Place a lettuce leaf on top of the mayonnaise.
+                      <br> Add a chicken patty on the lettuce.
+                      <br>Top the patty with a slice of cheese.
+                      <br>Add sliced tomatoes and onions.
+                      <br>Apply ketchup and mustard on the top half of the bun.
+                      <br>Final Assembly:
+                      
+                      <br>Bring the top and bottom halves of the burger together to assemble the complete chicken burger.
+                      <br>Secure the burger with a toothpick if needed.
+                      <br>Serve the chicken burger with additional condiments and pickles on the side.
+                      <br>Serve:
+                      
+                      <br>Serve the chicken burger hot and enjoy it with your favorite side dishes.
+            
+                </div>
+                <div class = "meal-img">
+                  <img
+                  src="https://www.kitchensanctuary.com/wp-content/uploads/2019/08/Crispy-Chicken-Burger-square-FS-4518.jpg"
+                  alt=""
+                />                  </div>
+                 
+            </div>
+        </div>  
+        <div class = "five-meal-detail" id="five-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Kheer</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Kheer, a classic Indian rice pudding, is a delightful and comforting dessert enjoyed during festivals and special occasions. The combination of rice, milk, sugar, and aromatic spices creates a sweet treat that is both indulgent and satisfying.
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br>1/2 cup basmati rice
+                      <br> 1 liter full-fat milk
+                      <br>1/2 cup sugar (adjust according to taste)
+                      <br>1/4 cup mixed dry fruits (almonds, cashews, raisins), chopped
+                      <br> 1/2 teaspoon cardamom powder
+                      <br>A pinch of saffron strands (optional)
+                      <br>1 tablespoon ghee (clarified butter)
+                      <br>Edible rose petals for garnish (optional)
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br>Rinse and Soak Rice:
+
+                      <br>Rinse 1/2 cup basmati rice under cold water until the water runs clear.
+                      <br>Soak the rice in water for 30 minutes.
+                      <br>Cook Rice:
+                      
+                      <br>In a heavy-bottomed pan, bring 1 liter of full-fat milk to a boil.
+                      <br>Drain the soaked rice and add it to the boiling milk.
+                      <br>Simmer on low heat, stirring occasionally to prevent the rice from sticking.
+                      <br>Add Sugar and Dry Fruits:
+                      
+                      <br>Once the rice is mostly cooked and the milk has thickened, add 1/2 cup sugar.
+                      <br>Stir well until the sugar dissolves.
+                      <br>Add chopped mixed dry fruits (almonds, cashews, raisins) and continue cooking.
+                      <br>Infuse Flavors:
+                      
+                      <br>Add a pinch of saffron strands for a fragrant touch (optional).
+                      <br>Sprinkle cardamom powder for a delightful aroma.
+                      <br>Allow the kheer to simmer until the rice is fully cooked, and the milk has thickened to a creamy consistency.
+                      <br>Finish with Ghee:
+                      
+                      <br>In a separate small pan, heat 1 tablespoon of ghee.
+                      <br>Sauté the remaining dry fruits until they are golden brown.
+                      <br>Add the sautéed dry fruits to the kheer and mix well.
+                      <br>Garnish and Serve:
+                      
+                      <br>Garnish the kheer with edible rose petals for a beautiful presentation (optional).
+                      <br>Chill the kheer in the refrigerator before serving if you prefer it cold.
+                      Serve the kheer warm or chilled, savoring the rich, creamy, and aromatic flavors.
+                    </p>
+            
+                </div>
+                <div class = "meal-img">
+                  <img
+                  src="https://cdn.tasteatlas.com//images/dishes/67f10cadc4de457bbbefb3600c2298e7.jpg?w=905&h=510"
+                  alt=""
+                />                  </div>
+                  
+            </div>
+        </div> 
+        <div class = "six-meal-detail" id="six-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Egg Roll</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">The Egg Roll, with its combination of a wholesome egg and vegetable filling wrapped in a soft paratha, is a delicious and convenient meal that can be enjoyed as a snack or a quick bite on the go.
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br>2 cups whole wheat flour
+                      <br>Water (as needed for dough)
+                      <br>Salt to taste
+                      <br>For the Egg Filling:
+                      
+                      <br>4 eggs
+                      <br> 1 onion, finely chopped
+                      <br> 1 tomato, finely chopped
+                      <br>1 green chili, finely chopped (adjust to taste)
+                      <br>1/2 cup bell peppers, thinly sliced
+                      <br>1/2 cup cabbage, thinly sliced
+                      <br> 1/2 teaspoon turmeric powder
+                      <br>1/2 teaspoon cumin powder
+                      <br>Salt and pepper to taste
+                      <br>Cooking oil
+                      <br>For the Sauce:
+                      
+                      <br> 2 tablespoons mayonnaise
+                      <br>1 tablespoon ketchup
+                      <br> 1 teaspoon hot sauce (optional)
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br>Prepare the Egg Paratha (Wrap):
+
+                      <br> In a bowl, mix whole wheat flour, water, and salt to form a smooth dough.
+                      <br> Divide the dough into small balls and roll each into a thin paratha (flatbread).
+                      <br>Cook the parathas on a hot griddle until they are lightly browned.
+                      <br>Make the Egg Filling:
+                      
+                      <br> In a bowl, beat the eggs and season with salt and pepper.
+                      <br>In a pan, heat oil and sauté chopped onions until translucent.
+                      <br>Add tomatoes, green chili, bell peppers, and cabbage. Cook until vegetables are tender.
+                      <br>Push the vegetables to one side of the pan and pour the beaten eggs into the other side.
+                      <br>Scramble the eggs until cooked and then mix them with the vegetables.
+                      <br>Add turmeric powder, cumin powder, salt, and pepper. Mix well and cook for a few more minutes.
+                      <br>Prepare the Sauce:
+                      
+                      <br>In a small bowl, mix mayonnaise, ketchup, and hot sauce (if using).
+                      <br> Assemble the Egg Roll:
+                      
+                      <br>Take a cooked paratha and place a portion of the egg and vegetable mixture in the center.
+                      <br> Drizzle the sauce over the filling.
+                      <br>Roll the paratha tightly to form the egg roll.
+                      <br>Seal the edges with a little water or the sauce to keep the roll secure.
+                      <br>Serve:
+                      
+                      <br>Serve the egg roll hot, optionally wrapped in foil for easy handling.
+                      <br>Enjoy this flavorful and satisfying street food delicacy!
+                    </p>
+            
+                </div>
+                <div class = "meal-img">
+                  <div class="card-img">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyeZ1zFu54OcwsuwpeEYUQURPuzNws_JQVeA&usqp=CAU"
+                      alt=""
+                    />
+                  </div>                  </div>
+                  
+            </div>
+        </div> 
+        <div class = "seven-meal-detail" id="seven-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Tandoori Chicken</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Tandoori Chicken, with its vibrant color and aromatic spices, is a popular and flavorful dish that can be enjoyed as an appetizer or main course. This recipe captures the essence of traditional tandoori cooking, delivering juicy and well-spiced chicken with a delicious smoky flavor.
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br>1.5 kg chicken pieces (with bone for best flavor)
+                      <br> 1 cup plain yogurt
+                      <br>2 tablespoons ginger-garlic paste
+                      <br>2 tablespoons tandoori masala
+                      <br> 1 tablespoon red chili powder (adjust to taste)
+                      <br>1 teaspoon turmeric powder
+                      <br>1 teaspoon ground cumin
+                      <br>1 teaspoon ground coriander
+                      <br>1 tablespoon garam masala
+                      <br>Salt to taste
+                      <br>2 tablespoons lemon juice
+                      <br> 2 tablespoons vegetable oil
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br>Prepare the Chicken:
+
+                      <br> Clean and score the chicken pieces to allow the marinade to penetrate.
+                      <br>Make deep cuts in the meat to ensure even cooking and absorption of flavors.
+                      <br>Prepare the Marinade:
+                      
+                      <br>In a bowl, combine yogurt, ginger-garlic paste, tandoori masala, red chili powder, turmeric powder, ground cumin, ground coriander, garam masala, salt, lemon juice, and vegetable oil.
+                      <br>Mix the marinade well until it forms a smooth and uniform paste.
+                      <br>Marinate the Chicken:
+                      
+                      <br>Coat the chicken pieces thoroughly with the marinade, ensuring they are well covered.
+                      <br>For best results, marinate the chicken for at least 4 hours or, preferably, overnight in the refrigerator. The longer the marination, the more flavorful the chicken.
+                      <br>Preheat the Oven or Grill:
+                      
+                      <br>Preheat your oven to the highest temperature (usually around 450°F or 230°C). If using a grill, preheat it to a medium-high temperature.
+                      <br>Cook the Tandoori Chicken:
+                      
+                      <br>If using an oven, place the marinated chicken on a wire rack over a baking tray to allow for even cooking.
+                      <br>Cook the chicken in the preheated oven for 25-30 minutes or until the chicken is fully cooked and has a charred appearance.
+                      <br>Garnish and Serve:
+                      
+                      <br>Garnish the Tandoori Chicken with freshly chopped coriander leaves.
+                      <br>Serve hot with lemon wedges and your favorite chutney or raita on the side.
+                    </p>
+            
+                </div>
+                <div class = "meal-img">
+                  <img
+                  src="https://cdn.tasteatlas.com//Images/Dishes/bdab2e7920f0409188d0b3646826893a.jpg?w=905&h=510"
+                  alt=""
+                />                  </div>
+                 
+            </div>
+        </div> 
+        <div class = "eight-meal-detail" id="eight-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Omelette</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">This simple and versatile omelette recipe allows you to customize your breakfast to suit your taste. Whether you prefer a classic cheese omelette or one packed with veggies and meats, the omelette is a quick and delicious meal that can be enjoyed any time of the day.
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br>2-3 eggs
+                      <br>Salt and pepper to taste
+                      <br>2 tablespoons milk (optional)
+                      <br>1 tablespoon butter or cooking oil
+                      <br>Fillings (optional):
+                      <br> Grated cheese
+                      <br> Chopped vegetables (bell peppers, onions, tomatoes, mushrooms)
+                      <br> Cooked meat (ham, bacon, sausage)
+                      <br> Herbs (parsley, chives)
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br>Prepare the Eggs:
+
+                      <br>Crack the eggs into a bowl. Add salt and pepper to taste. If you prefer a fluffier omelette, you can also add 2 tablespoons of milk and whisk the mixture until well combined.
+                      <br> Preheat the Pan:
+                      
+                      <br>Heat a non-stick skillet or frying pan over medium-high heat. Add butter or cooking oil and let it melt, ensuring the pan is evenly coated.
+                      <br>Pour and Cook the Eggs:
+                      
+                      <br>Pour the beaten eggs into the pan, ensuring an even spread.
+                      <br>Allow the eggs to set slightly at the edges, then gently lift the cooked portions with a spatula, tilting the pan to let the uncooked egg flow underneath.
+                      <br>Add Fillings (Optional):
+                      
+                      <br>Once the omelette is mostly set but still slightly runny on top, add your chosen fillings to one half of the omelette.
+                      <br>Fold and Serve:
+                      
+                      <br>Carefully fold the other half of the omelette over the fillings, creating a semi-circle or roll shape.
+                      <br>Cook for an additional minute or until the eggs are fully cooked and the fillings are heated through.
+                      <br>Garnish and Serve:
+                      
+                      <br>Slide the omelette onto a plate. Garnish with herbs if desired.
+                      <br>Serve hot with toast, a side salad, or your favorite condiments.
+                    </p>
+            
+                </div>
+                <div class = "meal-img">
+                  <img
+                  src="data:image/jpeg;base64,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"
+                  alt=""
+                />                  </div>
+            </div>
+        </div> 
+        <div class = "nine-meal-detail" id="nine-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Gulab Jamun</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Gulab Jamun, with its sweet and syrupy goodness, is a classic Indian dessert enjoyed during festivals and celebrations. This homemade version ensures soft and melt-in-your-mouth delights that are sure to be a hit with anyone with a sweet tooth.
+
+
+
+
+
+
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br>1 cup milk powder
+                      <br>  1/4 cup all-purpose flour (maida)
+                      <br> 1/4 cup ghee (clarified butter)
+                      <br>2 tablespoons milk
+                      <br> 1/4 teaspoon baking soda
+                      <br>A pinch of cardamom powder
+                      <br>Oil or ghee for deep frying
+                      <br>For the Sugar Syrup:
+                      
+                      <br>1 cup sugar
+                      <br>1/2 cup water
+                      <br>A few strands of saffron (optional)
+                      <br>1/2 teaspoon rose water (optional)
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br>Prepare the Gulab Jamun Dough:
+
+                      <br>In a bowl, combine milk powder, all-purpose flour, ghee, milk, baking soda, and cardamom powder.
+                      <br>Knead the mixture into a soft, smooth dough. If the dough is too dry, add a little more milk; if it's too sticky, add a bit more milk powder.
+                      <br>Shape the Jamuns:
+                      
+                      <br> Divide the dough into small portions and roll them into smooth balls without any cracks. Ensure there are no cracks to prevent the jamuns from breaking during frying.
+                      <br>Heat the Oil or Ghee:
+                      
+                      <br>Heat sufficient oil or ghee in a deep frying pan on medium heat. The temperature should be around 325°F to 350°F (165°C to 175°C).
+                      <br>Fry the Gulab Jamuns:
+                      
+                      <br>Carefully slide the shaped dough balls into the hot oil or ghee.
+                      <br>Fry them on low to medium heat, turning them gently to ensure even browning.
+                      <br>Fry until the gulab jamuns turn golden brown. The key is to fry them at a lower temperature to cook them thoroughly and achieve a soft texture.
+                      <br>Prepare the Sugar Syrup:
+                      
+                      <br>In a separate saucepan, combine sugar and water to make the sugar syrup.
+                      <br>Bring the mixture to a boil and simmer for 5-7 minutes until it forms a slightly sticky syrup.
+                      <br>Add saffron strands and rose water (if using) for added flavor.
+                      <br>Soak the Gulab Jamuns:
+                      
+                      <br> Once the jamuns are fried, immediately transfer them to the warm sugar syrup.
+                      <br> Allow the gulab jamuns to soak in the syrup for at least 1-2 hours, ensuring they absorb the sweetness.
+                      <br>Serve:
+                      
+                      <br>Garnish with chopped nuts (optional) and serve the delicious Gulab Jamuns warm or at room temperature.
+                    </p>
+            
+                </div>
+                <div class = "meal-img">
+                  <img
+                  src="https://cdn.tasteatlas.com//Images/Dishes/23fba80da08c46ceba5a99a5b1f1f200.jpg?w=905&h=510"
+                  alt=""
+                />                  </div>
+                  
+            </div>
+        </div> 
+        <div class = "ten-meal-detail" id="ten-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Chaat</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Chaat, a popular Indian street food, is a delightful combination of textures and flavors. This recipe allows you to customize your chaat with various toppings and adjust the spice levels according to your preference, making it a perfect snack for any occasion.
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br>2 cups boiled and cubed potatoes
+                      <br>1 cup boiled chickpeas
+                      <br>1 cup chopped onions
+                      <br>1 cup chopped tomatoes
+                      <br>1/2 cup chopped cucumber
+                      <br>1/2 cup chopped bell peppers (capsicum)
+                      <br>1/4 cup chopped fresh coriander leaves
+                      <br>For the Chaat Seasoning:
+                      
+                      <br>Chaat masala to taste
+                      <br>Roasted cumin powder to taste
+                      <br>Red chili powder to taste
+                      <br> Black salt to taste
+                      <br>Salt to taste
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br>Prepare the Tamarind Chutney:
+
+                      <br>In a saucepan, combine tamarind pulp, jaggery or sugar, roasted cumin powder, red chili powder, and salt.
+                      <br>Cook on low heat until the mixture thickens into a chutney consistency. Allow it to cool.
+                      <br>Make the Mint Yogurt Sauce:
+                      
+                      <br>Blend plain yogurt, fresh mint leaves, cumin powder, and salt in a blender until smooth. Adjust consistency with a little water if needed.
+                      <br>Assemble the Chaat:
+                      
+                      <br>In a large mixing bowl, combine boiled and cubed potatoes, boiled chickpeas, chopped onions, tomatoes, cucumber, bell peppers, and fresh coriander leaves.
+                      <br> Season the Chaat:
+                      
+                      <br>Sprinkle chaat masala, roasted cumin powder, red chili powder, black salt, and regular salt over the chaat base. Adjust the quantities according to taste.
+                      <br>Add Tamarind Chutney and Mint Yogurt Sauce:
+                      
+                      <br>Drizzle tamarind chutney and mint yogurt sauce over the chaat to enhance the flavors.
+                      <br>Mix Well:
+                      
+                      <br>Gently toss all the ingredients together until the chaat is well-coated with the seasonings and sauces.
+                      <br>Garnish and Serve:
+                      
+                      <br>Garnish the chaat with sev, pomegranate seeds, chopped green chilies, and fresh coriander leaves.
+                      <br>Serve immediately and enjoy the burst of flavors in every bite.
+                    </p>
+            
+                </div>
+                <div class = "meal-img">
+                  <img
+                  src="https://cdn.tasteatlas.com//Images/Dishes/84327074df8e4c5fabeaeca6fa3ab659.jpg?w=905&h=510"
+                  alt=""
+                />            </div>
+                 
+            </div>
+        </div> 
+        <div class = "eleven-meal-detail" id="four-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Potato Egg Skillet</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">In cuisine, an omelette is a dish made from beaten eggs, fried with butter or oil in a frying pan. It is quite common for the omelette to be folded around fillings such as chives, vegetables, mushrooms, meat, cheese, onions or some combination of the above. 
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br>8 strips raw bacon
+                        <br>1 lbs Yukon gold potatoes, diced into bite sized pieces
+                        <br>1 small yellow onion, diced
+                        <br>½ red bell pepper, diced
+                        <br>½ green bell pepper, diced
+                        <br>3 cloves garlic, minced
+                        <br>1 teaspoon cumin
+                        <br>¼ teaspoon chili powder
+                        <br>¼ teaspoon paprika
+                        <br>½ teaspoon black pepper
+                        <br>½ teaspoon coarse salt
+                        <br>4 eggs
+                        <br>¼ cup mozzarella cheese, grated
+                        <br>¼ cup cheddar cheese, grated
+                        <br>Extra virgin olive oil for extra drizzling
+                        <br>Fresh cilantro roughly chopped, thinly sliced chives for garnish
+                    </p>
+                    <h3>Instruction:</h3>
+                    <p><br>1. Preheat oven to 400˚F. Place strips of bacon in a large (at least 10 inch), oven safe skillet. Cook over medium low heat on both sides until cooked through but not yet crispy, about 10 minutes. Remove from heat to a paper towel lined plate and set aside, leaving the bacon grease in the pan. When the bacon is cool enough to handle, roughly dice.
+                        <br>Increase the heat to medium high, add the potatoes, bell pepper, and onion and cook for 7- 8 minutes, stirring frequently, until starting to soften and can be pierced with a fork
+                        <br>Add garlic, cumin, chili powder, paprika, black pepper, and salt. Cook for 1-2 minutes, until garlic is fragrant.
+                        <br>Using a spoon, create 4 to 6 holes (depending on how many eggs you want) in the hash mixture for the eggs. Distribute the cheeses evenly into each hole, and then crack one egg into each hole.
+                        <br>Place in the preheat oven and cook for 8-10 minutes, until egg white is set but the yolk is still runny.
+                        <br>Remove from heat. Sprinkle with cooked bacon. Garnish with fresh ground black pepper, cilantro and chives.
+                    </p>
+            
+                </div>
+                <div class = "meal-img">
+                  <img
+                  src="https://tianmeds.github.io/ExpressEat/img/Potato-Breakfast-Skillet.webp"
+                  alt=""
+                />                  </div>
+                 
+            </div>
+        </div> 
+        
+        
+    </div>
+        <!--Ending of Recipe Details-->
+
+        <!--Footer-->
+        <div class="footer">
+          <nav class="navbar">
+            <div class="First">
+              <img src="../Infotrixs images/chef15.jpg" id="f1" />
+            </div>
+        
+            <div class="Second">
+              <img src="../Infotrixs images/logo.png" id="f2" />
+              <p>
+                “Food is really and truly <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;the most effective <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;medicine"
+              </p>
+            </div>
+        
+            <div class="Third">
+              <h1>Quick Link</h1>
+              <span class="anchor">
+                <a href="../home/home.html">Home</a>
+                <a href="../All_recipes/All_Recipes.html">Breakfast</a>
+                <a href="../latest_recipe/Latest_Recipes.html">Latest Recipes</a>
+                <a href="../about/about.html">About</a>
+                <a href="../contact/Contact.html">Contact</a>
+              </span>
+            </div>
+        
+            <div class="fourth">
+              <h1>Contact</h1>
+              <div class="contact-details">
+                <i class="fa-solid fa-location-dot"
+                  ><a
+                    href="Shivaji Nagar Rd, Sara Raaj Nagar, Garkheda, Aurangabad, Maharashtra 431001"
+                    >Maharashtra</a
+                  ></i
+                >
+                <br />
+                <i class="fa-solid fa-phone"
+                  ><a href="+91 9763033497">+91 9763033497</a></i
+                >
+                <br />
+                <i class="fa-solid fa-envelope"
+                  ><a href="contact@infotrixs.com">contact@infotrixs.com</a></i
+                >
+              </div>
+            </div>
+        
+            <div class="fifth">
+              <h1>Developers name</h1>
+              <div class="box">
+                <span class="ui">
+                  <p>UI design: Pradeep Singh Negi</p>
+                </span>
+                <p>Front end: Biswajit Saraf, Aneesh Kumar , Pradeep Singh Negi</p>
+                <p>
+                  Back end: Monika Hanwate,Mohamed Ashraff , Vijay Deoram Shirsath
+                </p>
+              </div>
+            </div>
+            <div class="six">
+              <img src="../Infotrixs images/chef12.png" />
+            </div>
+          </nav>
+<!--Ending of Footer-->
+
+<!--Script for Javascript-->
+<script src="./home.js"></script>
+</body>
+</html>
